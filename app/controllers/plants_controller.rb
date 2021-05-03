@@ -36,7 +36,6 @@ class PlantsController < ApplicationController
   # DELETE /plants/1
   def destroy
     @plant.destroy
-    render json: @plant
   end
 
   private
@@ -47,6 +46,6 @@ class PlantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plant_params
-      params.require(:plant).permit(:name, :img_url, :info)
+      params.require(:plant).permit(:title, :light, :temp, :water, :soil, :feed, :tip)
     end
 end

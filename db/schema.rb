@@ -10,12 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_29_212625) do
+ActiveRecord::Schema.define(version: 2021_05_02_150624) do
 
   create_table "plants", force: :cascade do |t|
-    t.string "name"
-    t.string "img_url"
-    t.text "info"
+    t.string "title"
+    t.text "light"
+    t.text "temp"
+    t.text "water"
+    t.text "soil"
+    t.text "feed"
+    t.text "tip"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

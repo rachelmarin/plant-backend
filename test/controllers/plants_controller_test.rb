@@ -12,7 +12,7 @@ class PlantsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create plant" do
     assert_difference('Plant.count') do
-      post plants_url, params: { plant: { img_url: @plant.img_url, info: @plant.info, name: @plant.name } }, as: :json
+      post plants_url, params: { plant: { feed: @plant.feed, light: @plant.light, soil: @plant.soil, temp: @plant.temp, tip: @plant.tip, title: @plant.title, water: @plant.water } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class PlantsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update plant" do
-    patch plant_url(@plant), params: { plant: { img_url: @plant.img_url, info: @plant.info, name: @plant.name } }, as: :json
+    patch plant_url(@plant), params: { plant: { feed: @plant.feed, light: @plant.light, soil: @plant.soil, temp: @plant.temp, tip: @plant.tip, title: @plant.title, water: @plant.water } }, as: :json
     assert_response 200
   end
 
