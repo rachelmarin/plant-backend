@@ -36,6 +36,7 @@ class PlantsController < ApplicationController
   # DELETE /plants/1
   def destroy
     @plant.destroy
+    render json: @plant
   end
 
   private
